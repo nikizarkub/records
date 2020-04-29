@@ -1,0 +1,277 @@
+/*
+* Applied to entire document
+*/
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
+/*
+* Creating hidden class that hides elements 
+*/
+.hidden {
+    display: none;
+}
+
+/*
+* Style header and its elements
+*/
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.header-elem {
+    margin: 20px 30px 20px 30px;  
+}
+#about-page:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/*
+* Styling the container for the music player and selection area
+*/
+.main-view {
+    display: flex;
+    flex-direction: row;
+}
+
+/*
+* Style music player and related divs
+*/
+#outer-stage {
+    width: 100%;
+}
+#stage {
+    position: relative;
+    margin: 0 auto;
+}
+#player {
+    position: absolute;
+}
+#record {
+    position: absolute;
+}
+#arm {
+    position: absolute;
+}
+
+/*
+* Ensures images stay within their divs
+*/
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*
+* Styling the music selection area
+*/
+#music-selection {
+    width: 100%;
+    margin-top: 80px;
+}
+
+#movie-cards {
+    text-align: center;
+}
+
+/*
+* Style music player and selection such that it works for various screen sizes
+*/
+@media screen and (max-width: 480px) {
+    #stage {
+        height: 300px;
+        width: 300px;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    #outer-stage {
+        margin-top: 100px;
+    }
+    #stage {
+        height: 480px;
+        width: 480px;
+    }
+    #record {
+        left: 15%;
+        top: 8%;
+        height: 40%;
+    }
+    #arm {
+        left: 33%;
+        top: 5.5%;
+        height: 35%;
+    }
+
+}
+@media screen and (min-width: 769px) and (max-width: 1279px) {
+    #outer-stage {
+        margin-top: 50px;
+    }
+    #stage {
+        height: 700px;
+        width: 700px;
+    }
+    #record {
+        left: 15%;
+        top: 8%;
+        height: 40%;
+    }
+
+    #arm {
+        left: 27.25%;
+        top: 4.25%;
+        height: 40%;
+    }
+
+    #music-selection {
+        margin-top: 60px;
+    }
+
+}
+@media screen and (min-width: 1280px){
+    #stage {
+        height: 900px;
+        width: 900px;
+    }
+    #record {
+        left: 13.5%;
+        top: 5%;
+        height: 43%;
+    }
+    #arm {
+        left: 24%;
+        top: 3.5%;
+        height: 43%;
+    }
+    #music-selection {
+        margin-top: 20px;
+    }
+}
+
+/*
+* Create animations for the record and record arm
+*/
+@keyframes recordSpin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes armOff {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-20deg);
+        transform-origin: 78% 24%;
+    }
+}
+@keyframes armOn {
+    from {
+        transform: rotate(-20deg);
+        transform-origin: 79% 15%;
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+/*
+* Lights up the arm, acts as a signifier to let the user know 
+* to click on the arm
+*/
+#arm:hover {
+    filter: drop-shadow(5px 5px 5px white);
+    cursor: pointer;
+}
+/*
+* Creating different classes so that background changes with record
+*/
+.up {
+    background-color: #F2BFDD;
+}
+.ratatouille {
+    background-color: #F1F29B;
+}
+.monstersinc {
+    background-color: #D3F0CC;
+}
+.toystory {
+    background-color:#F7BC86;
+}
+.nemo {
+    background-color:#A4D8F5;
+}
+.incredibles {
+    background-color: #F28F95;
+}
+
+/*
+* Styling the movie images
+*/
+.movie-img {
+    margin: 10px;
+    width: 25%;
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 10px;
+}
+
+.movie-img:hover {
+    cursor: pointer;
+    filter: drop-shadow(5px 5px 5px white);
+}
+
+/*
+* Styling the buttons that change the view
+*/
+.action-buttons {
+    display: flex;
+    direction: row;
+    justify-content: space-evenly;
+}
+
+#show-music {
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#show-music:hover, #show-player:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#show-player {
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#help-button {
+    height: 20px;
+    position: fixed;
+    bottom: 24px;
+    right: 20px;  
+}
+
+#help-button:hover {
+    cursor: pointer;
+}
+
+#help-text {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    text-align: right;
+}

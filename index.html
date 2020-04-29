@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <title>records</title>
+    <link rel="stylesheet" href="assets/style/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="audio-player" loop>
+        <source src="assets/music/up-song.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <div id="header">
+        <p class="header-elem"><b>records</b></p>
+        <a class="header-elem" id="about-page" href="about.html" target="_self">about</a>
+    </div>
+    <div class="main-view">
+        <div id="outer-stage">
+            <div id="stage">
+                <img src="assets/img/player.png" alt="Record Player" id="player">
+                <img src="assets/img/record-up.png" alt="Record" id="record">
+                <img src="assets/img/arm.png" alt="Record Player Arm" id="arm">
+            </div>
+        </div>
+        <div id="music-selection" class="hidden">
+            <div id="movie-cards">
+                <div id="music-row-one">
+                    <img src="assets/img/movies/UP.png" alt="up record" id="up-movie" class="movie-img">
+                    <img src="assets/img/movies/RATATOUILLE.png" alt="ratatouille record" id="ratatouille-movie" class="movie-img">
+                    <img src="assets/img/movies/MONSTERS.png" alt="monsters inc record" id="monsters-movie" class="movie-img">
+                </div>
+                <div id="music-row-two">
+                    <img src="assets/img/movies/TOYSTORY.png" alt="toy story record" id="toystory-movie" class="movie-img">
+                    <img src="assets/img/movies/NEMO.png" alt="nemo record" id="nemo-movie" class="movie-img">
+                    <img src="assets/img/movies/INCREDIBLES.png" alt="incredibles record" id="incredibles-movie" class="movie-img">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="action-buttons">
+        <p id="show-music">wanna change the song?</p>
+        <p class="hidden" id="show-player">wanna view the player?</p>
+        <img src="assets/img/question.png" id="help-button">
+        <p id="help-text" class="hidden"> Click on the arm to </br> start or stop the music.</p>
+    </div>
+
+    <script src="assets/scripts/index-script.js"></script>
+</body>
