@@ -160,7 +160,7 @@ a {
 }
 
 /*
-* Source: https://www.w3schools.com/howto/howto_css_flip_card.asp-
+* Source: https://www.w3schools.com/howto/howto_css_flip_card.asp
 */
 .flip-card {
     width: 250px;
@@ -188,6 +188,7 @@ a {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* Safari */
 }
 
 .flip-card-front {
